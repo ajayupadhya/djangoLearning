@@ -7,6 +7,7 @@ from api.category.models import Category
 
 
 class Product(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=250)
     price = models.CharField(max_length=50)

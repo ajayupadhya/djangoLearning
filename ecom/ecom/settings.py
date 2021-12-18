@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'api',
     "api.category",
-    "api.product"
+    "api.product",
+    "api.user",
+    "api.order",
+    "api.payment"
 ]
 
 MIDDLEWARE = [
@@ -89,6 +92,27 @@ DATABASES = {
 }
 
 
+# DATABASES = {
+
+#     'default': {
+
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+#         'NAME': 'd1v0t9t0eii95k',
+
+#         'USER': 'fdbzbzgnnbuybw',
+
+#         'PASSWORD': '5f2c3d63b66fe494ec459b0562c89d6cb56cc5afcb7723b38e524ed2ba42d55c',
+
+#         'HOST': 'ec2-44-198-211-34.compute-1.amazonaws.com',
+
+#         'PORT': '5432',
+
+#     }
+
+# }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -121,6 +145,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+AUTH_USER_MODEL = "user.CustomUser"
 
 CORS_ALLOW_ALL_ORIGINS: True
 
